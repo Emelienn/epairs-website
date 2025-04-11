@@ -288,11 +288,12 @@ nav a:hover::after {
     margin-bottom: 20px;
     position: relative;
     z-index: 2;
-    transition: transform var(--transition-normal);
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .service-card:hover img {
     transform: scale(1.1);
+    filter: brightness(1.1);
 }
 
 .service-card h3 {
@@ -705,6 +706,34 @@ footer::before {
     .contact-form {
         padding: 20px;
     }
+    
+    /* Улучшения для мобильной версии */
+    .service-card, .feature, .review-card {
+        padding: 20px;
+    }
+    
+    .service-card img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .phone {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+    
+    .footer-content {
+        gap: 30px;
+    }
+    
+    .social-links a {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -730,12 +759,55 @@ footer::before {
     .social-links {
         justify-content: center;
     }
+    
+    /* Дополнительные улучшения для маленьких экранов */
+    .hero {
+        height: 35vh;
+        margin-top: 60px;
+    }
+    
+    .services, .reviews, .contact-form-section {
+        padding: 60px 0;
+    }
+    
+    .service-card, .feature, .review-card {
+        margin: 0 10px;
+    }
+    
+    .contact-form {
+        margin: 0 15px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+    }
+    
+    button {
+        padding: 12px 25px;
+    }
 }
 
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
 .service-card, .feature, .review-card {
@@ -753,6 +825,35 @@ footer::before {
 .service-card:nth-child(4) {
     animation-delay: 0.6s;
 }
+
+.service-card img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.phone {
+    animation: pulse 2s infinite;
+}
+
+.logo {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+nav a {
+    animation: slideInRight 0.8s ease-out;
+    animation-fill-mode: both;
+}
+
+nav a:nth-child(1) { animation-delay: 0.1s; }
+nav a:nth-child(2) { animation-delay: 0.2s; }
+nav a:nth-child(3) { animation-delay: 0.3s; }
+nav a:nth-child(4) { animation-delay: 0.4s; }
+nav a:nth-child(5) { animation-delay: 0.5s; }
+nav a:nth-child(6) { animation-delay: 0.6s; }
 
 /* Scroll Reveal Effect */
 .reveal {
