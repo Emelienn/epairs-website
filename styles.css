@@ -1,22 +1,20 @@
 :root {
-    --primary-color: #3182ce; /* Синий для основных элементов */
-    --secondary-color: #4299e1; /* Светло-синий для второстепенных элементов */
-    --accent-color: #4299e1; /* Яркий синий для акцентов */
-    --text-color: #2d3748; /* Темно-серый для текста */
-    --light-text: #718096; /* Серый для вторичного текста */
-    --background-color: #ffffff; /* Белый фон */
-    --card-bg: #ffffff; /* Белый для карточек */
-    --border-color: #e2e8f0; /* Серый для границ */
-    --hover-color: #2c5282; /* Темно-синий для ховера */
-    --success-color: #48bb78; /* Зеленый для успешных действий */
-    --error-color: #e53e3e; /* Красный для ошибок */
-    --shadow-color: rgba(0, 0, 0, 0.1); /* Цвет тени */
-    --shadow-sm: 0 1px 3px var(--shadow-color); /* Малая тень */
-    --shadow-md: 0 4px 6px var(--shadow-color); /* Средняя тень */
-    --shadow-lg: 0 10px 15px var(--shadow-color); /* Большая тень */
-    --transition: all 0.3s ease; /* Плавный переход */
-    --text-light: #4a5568; /* Темно-серый для текста */
-    --light-bg: #ffffff; /* Белый фон */
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --accent-color: #28a745;
+    --text-color: #333;
+    --background-color: #fff;
+    --border-color: #dee2e6;
+    --hover-color: #0056b3;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-sm: 0 1px 3px var(--shadow-color);
+    --shadow-md: 0 4px 6px var(--shadow-color);
+    --shadow-lg: 0 10px 15px var(--shadow-color);
+    --transition: all 0.3s ease;
+    --text-light: #4a5568;
+    --light-bg: #ffffff;
     --white: #FFFFFF;
     --gradient: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
     --border-radius-sm: 8px;
@@ -25,47 +23,6 @@
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
-}
-
-/* Темная тема */
-[data-theme="dark"] {
-    --primary-color: #4299e1; /* Светло-синий для основных элементов */
-    --secondary-color: #63b3ed; /* Голубой для второстепенных элементов */
-    --accent-color: #90cdf4; /* Светло-голубой для акцентов */
-    --text-color: #f7fafc; /* Светло-серый для текста */
-    --light-text: #cbd5e0; /* Светло-серый для вторичного текста */
-    --background-color: #1a202c; /* Темно-серый фон */
-    --card-bg: #2d3748; /* Темно-серый для карточек */
-    --border-color: #4a5568; /* Темно-серый для границ */
-    --hover-color: #63b3ed; /* Голубой для ховера */
-    --shadow-color: rgba(0, 0, 0, 0.3); /* Цвет тени */
-}
-
-/* Переключатель темы */
-.theme-switch {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: var(--shadow-md);
-    z-index: 1000;
-    transition: var(--transition);
-}
-
-.theme-switch:hover {
-    transform: scale(1.1);
-}
-
-.theme-switch i {
-    font-size: 24px;
 }
 
 * {
@@ -1059,4 +1016,14 @@ nav a:nth-child(6) { animation-delay: 0.6s; }
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
+}
+
+/* Удаляем стили для темной темы */
+[data-theme="dark"] {
+    display: none;
+}
+
+/* Удаляем стили для переключателя темы */
+.theme-switch {
+    display: none;
 }
