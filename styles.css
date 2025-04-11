@@ -202,7 +202,7 @@ nav a:hover::after {
 /* Services Section */
 .services {
     padding: 100px 0;
-    background: var(--background-color);
+    background: var(--white);
     position: relative;
 }
 
@@ -312,7 +312,7 @@ nav a:hover::after {
 /* Features Section */
 .features {
     padding: 80px 0;
-    background: var(--background-color);
+    background: var(--light-bg);
     position: relative;
     overflow: hidden;
 }
@@ -378,7 +378,7 @@ nav a:hover::after {
 /* Reviews Section */
 .reviews {
     padding: 100px 0;
-    background: var(--background-color);
+    background: var(--white);
     position: relative;
 }
 
@@ -492,7 +492,7 @@ nav a:hover::after {
 /* Contact Form Section */
 .contact-form-section {
     padding: 100px 0;
-    background: var(--background-color);
+    background: var(--light-bg);
     position: relative;
     overflow: hidden;
 }
@@ -769,7 +769,7 @@ footer::before {
 /* Статус заказа */
 .status-check {
     padding: 60px 0;
-    background-color: var(--background-color);
+    background-color: var(--light-bg);
 }
 
 .status-form {
@@ -801,7 +801,7 @@ footer::before {
 .step-card {
     text-align: center;
     padding: 30px;
-    background: var(--background-color);
+    background: white;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
