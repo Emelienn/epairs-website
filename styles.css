@@ -14,7 +14,7 @@
     --gradient-end: #2d3748; /* Конец градиента */
     --shadow-color: rgba(26, 54, 93, 0.1); /* Тень с синим оттенком */
     --text-light: #636E72;
-    --light-bg: #F5F6FA;
+    --light-bg: #ffffff; /* Белый фон */
     --white: #FFFFFF;
     --gradient: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
     --shadow-sm: 0 4px 6px var(--shadow-color);
