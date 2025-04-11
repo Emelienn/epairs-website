@@ -870,16 +870,16 @@ nav a:nth-child(6) { animation-delay: 0.6s; }
 /* Статус заказа */
 .status-check {
     padding: 60px 0;
-    background-color: var(--light-bg);
+    background-color: var(--background-color);
 }
 
 .status-form {
     max-width: 500px;
     margin: 0 auto;
     padding: 30px;
-    background: white;
+    background: var(--background-color);
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 .status-form h2 {
@@ -902,9 +902,9 @@ nav a:nth-child(6) { animation-delay: 0.6s; }
 .step-card {
     text-align: center;
     padding: 30px;
-    background: white;
+    background: var(--background-color);
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
 }
 
@@ -936,4 +936,87 @@ nav a:nth-child(6) { animation-delay: 0.6s; }
     .status-form {
         margin: 0 20px;
     }
+}
+
+/* Контакты */
+.contacts {
+    padding: 60px 0;
+    background-color: var(--background-color);
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contact-card {
+    text-align: center;
+    padding: 30px;
+    background: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-card i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.contact-card h3 {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.contact-card p {
+    color: var(--secondary-text);
+    line-height: 1.6;
+}
+
+/* Форма обратной связи */
+.contact-form-section {
+    padding: 60px 0;
+    background-color: var(--background-color);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
 }
