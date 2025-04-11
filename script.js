@@ -7,13 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Forms
     const forms = document.querySelectorAll('form');
     
-    // Images
-    const images = document.querySelectorAll('img[data-src]');
-    
     // Initialize
     initNavigation();
     initForms();
-    initLazyLoading();
     initScrollAnimations();
     initMobileMenu();
 });
@@ -85,24 +81,6 @@ function initForms() {
                 }
             }
         });
-    });
-}
-
-// Lazy Loading
-function initLazyLoading() {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.removeAttribute('data-src');
-                observer.unobserve(img);
-            }
-        });
-    });
-    
-    document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
     });
 }
 
