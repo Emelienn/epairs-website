@@ -1,7 +1,18 @@
 :root {
-    --primary-color: #2D3436;
-    --accent-color: #00B894;
-    --text-color: #2D3436;
+    --primary-color: #1a365d; /* Темно-синий */
+    --secondary-color: #2d3748; /* Темно-серый */
+    --accent-color: #4299e1; /* Яркий синий для акцентов */
+    --text-color: #2d3748; /* Темно-серый для текста */
+    --light-text: #a0aec0; /* Светло-серый для второстепенного текста */
+    --background-color: #f7fafc; /* Светло-серый фон */
+    --card-bg: #ffffff; /* Белый для карточек */
+    --border-color: #e2e8f0; /* Светло-серый для границ */
+    --hover-color: #2c5282; /* Темно-синий для ховера */
+    --success-color: #48bb78; /* Зеленый для успешных действий */
+    --error-color: #f56565; /* Красный для ошибок */
+    --gradient-start: #1a365d; /* Начало градиента */
+    --gradient-end: #2d3748; /* Конец градиента */
+    --shadow-color: rgba(26, 54, 93, 0.1); /* Тень с синим оттенком */
     --text-light: #636E72;
     --light-bg: #F5F6FA;
     --white: #FFFFFF;
@@ -27,7 +38,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--white);
+    background-color: var(--background-color);
     overflow-x: hidden;
 }
 
@@ -141,12 +152,12 @@ nav a:hover::after {
 /* Hero Section */
 .hero {
     height: 40vh;
-    background: var(--gradient);
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--white);
+    color: white;
     position: relative;
     overflow: hidden;
     margin-top: 80px;
@@ -237,15 +248,15 @@ nav a:hover::after {
 }
 
 .service-card {
-    background: var(--white);
+    background: var(--card-bg);
     border-radius: var(--border-radius-md);
     padding: 30px;
     text-align: center;
     transition: all var(--transition-normal);
     position: relative;
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px var(--shadow-color);
+    border: 1px solid var(--border-color);
 }
 
 .service-card::before {
@@ -262,8 +273,8 @@ nav a:hover::after {
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px var(--shadow-color);
 }
 
 .service-card:hover::before {
@@ -411,14 +422,14 @@ nav a:hover::after {
 }
 
 .review-card {
-    background: var(--white);
+    background: var(--card-bg);
     border-radius: var(--border-radius-md);
     padding: 30px;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 6px var(--shadow-color);
     transition: all var(--transition-normal);
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
 }
 
 .review-card::before {
@@ -436,7 +447,7 @@ nav a:hover::after {
 
 .review-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 8px 12px var(--shadow-color);
 }
 
 .review-card:hover::before {
@@ -507,7 +518,7 @@ nav a:hover::after {
     box-shadow: var(--shadow-md);
     position: relative;
     z-index: 1;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
 }
 
 .contact-form h2 {
@@ -525,18 +536,18 @@ nav a:hover::after {
 .form-group textarea {
     width: 100%;
     padding: 12px;
-    border: 2px solid #E0E0E0;
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius-sm);
     font-size: 1rem;
     transition: all var(--transition-normal);
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--background-color);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(0, 184, 148, 0.1);
+    box-shadow: 0 0 0 2px var(--shadow-color);
 }
 
 .form-group label {
@@ -551,7 +562,7 @@ nav a:hover::after {
 button {
     width: 100%;
     padding: 15px;
-    background: var(--gradient);
+    background: var(--primary-color);
     color: var(--white);
     border: none;
     border-radius: var(--border-radius-sm);
@@ -586,8 +597,8 @@ button:hover::before {
 
 /* Footer */
 footer {
-    background: var(--primary-color);
-    color: var(--white);
+    background: var(--secondary-color);
+    color: var(--light-text);
     padding: 60px 0 20px;
     position: relative;
     overflow: hidden;
