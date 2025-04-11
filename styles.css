@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #1a365d; /* Темно-синий */
-    --secondary-color: #2d3748; /* Темно-серый */
+    --primary-color: #3182ce; /* Синий для основных элементов */
+    --secondary-color: #4299e1; /* Светло-синий для второстепенных элементов */
     --accent-color: #4299e1; /* Яркий синий для акцентов */
     --text-color: #2d3748; /* Темно-серый для текста */
     --light-text: #718096; /* Серый для вторичного текста */
@@ -9,23 +9,63 @@
     --border-color: #e2e8f0; /* Серый для границ */
     --hover-color: #2c5282; /* Темно-синий для ховера */
     --success-color: #48bb78; /* Зеленый для успешных действий */
-    --error-color: #f56565; /* Красный для ошибок */
-    --gradient-start: #1a365d; /* Начало градиента */
-    --gradient-end: #2d3748; /* Конец градиента */
-    --shadow-color: rgba(26, 54, 93, 0.1); /* Тень с синим оттенком */
+    --error-color: #e53e3e; /* Красный для ошибок */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Цвет тени */
+    --shadow-sm: 0 1px 3px var(--shadow-color); /* Малая тень */
+    --shadow-md: 0 4px 6px var(--shadow-color); /* Средняя тень */
+    --shadow-lg: 0 10px 15px var(--shadow-color); /* Большая тень */
+    --transition: all 0.3s ease; /* Плавный переход */
     --text-light: #4a5568; /* Темно-серый для текста */
     --light-bg: #ffffff; /* Белый фон */
     --white: #FFFFFF;
     --gradient: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-    --shadow-sm: 0 4px 6px var(--shadow-color);
-    --shadow-md: 0 10px 15px var(--shadow-color);
-    --shadow-lg: 0 20px 25px var(--shadow-color);
     --border-radius-sm: 8px;
     --border-radius-md: 12px;
     --border-radius-lg: 20px;
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
+}
+
+/* Темная тема */
+[data-theme="dark"] {
+    --primary-color: #4299e1; /* Светло-синий для основных элементов */
+    --secondary-color: #63b3ed; /* Голубой для второстепенных элементов */
+    --accent-color: #90cdf4; /* Светло-голубой для акцентов */
+    --text-color: #f7fafc; /* Светло-серый для текста */
+    --light-text: #cbd5e0; /* Светло-серый для вторичного текста */
+    --background-color: #1a202c; /* Темно-серый фон */
+    --card-bg: #2d3748; /* Темно-серый для карточек */
+    --border-color: #4a5568; /* Темно-серый для границ */
+    --hover-color: #63b3ed; /* Голубой для ховера */
+    --shadow-color: rgba(0, 0, 0, 0.3); /* Цвет тени */
+}
+
+/* Переключатель темы */
+.theme-switch {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.theme-switch:hover {
+    transform: scale(1.1);
+}
+
+.theme-switch i {
+    font-size: 24px;
 }
 
 * {

@@ -79,16 +79,16 @@
     <section class="contact-form-section">
         <div class="container">
             <div class="contact-form">
-                <h2>Заявка на ремонт + скидка 10%</h2>
+                <h2>Оставить заявку</h2>
                 <form>
                     <div class="form-group">
-                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="text" placeholder="Имя" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" placeholder="Ваш телефон" required>
+                        <input type="tel" placeholder="Телефон" required>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Опишите проблему" rows="4"></textarea>
+                        <textarea placeholder="Проблема" rows="4"></textarea>
                     </div>
                     <div class="form-group">
                         <label>
@@ -138,5 +138,45 @@
             </div>
         </div>
     </footer>
+
+    <!-- Переключатель темы -->
+    <div class="theme-switch" id="themeSwitch">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- JavaScript для переключения темы -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeSwitch = document.getElementById('themeSwitch');
+            const icon = themeSwitch.querySelector('i');
+            
+            // Проверяем сохраненную тему
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+            
+            // Обработчик клика
+            themeSwitch.addEventListener('click', function() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                
+                if (currentTheme === 'dark') {
+                    // Переключаем на светлую тему
+                    document.documentElement.removeAttribute('data-theme');
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    // Переключаем на темную тему
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+        });
+    </script>
 </body>
 </html> 

@@ -6,7 +6,7 @@
     <title>Epairs - Ремонт техники</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <meta name="description" content="Профессиональный ремонт iPhone, Samsung, Xiaomi и Honor. Гарантия на все виды работ. Быстрое восстановление после повреждений.">
+    <meta name="description" content="Профессиональный ремонт iPhone, Samsung, Xiaomi и Honor. Гарантия на все виды работ. Бесплатная диагностика.">
     <meta name="keywords" content="ремонт iPhone, ремонт Samsung, ремонт Xiaomi, ремонт Honor, сервисный центр, замена экрана, замена батареи, ремонт после воды">
     <meta name="author" content="Epairs">
     <meta name="robots" content="index, follow">
@@ -85,22 +85,22 @@
             <h2>Наши услуги</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <img src="images/iphone-icon.jpg" alt="iPhone">
+                    <img src="images/iphone-icon.jpg" alt="iPhone" width="200" height="200">
                     <h3>iPhone</h3>
                     <p>Ремонт всех моделей iPhone</p>
                 </div>
                 <div class="service-card">
-                    <img src="images/samsung-icon.jpg" alt="Samsung">
+                    <img src="images/samsung-icon.jpg" alt="Samsung" width="200" height="200">
                     <h3>Samsung</h3>
                     <p>Ремонт всех моделей Samsung</p>
                 </div>
                 <div class="service-card">
-                    <img src="images/xiaomi-icon.jpg" alt="Xiaomi">
+                    <img src="images/xiaomi-icon.jpg" alt="Xiaomi" width="200" height="200">
                     <h3>Xiaomi</h3>
                     <p>Ремонт всех моделей Xiaomi</p>
                 </div>
                 <div class="service-card">
-                    <img src="images/honor-icon.jpg" alt="Honor">
+                    <img src="images/honor-icon.jpg" alt="Honor" width="200" height="200">
                     <h3>Honor</h3>
                     <p>Ремонт всех моделей Honor</p>
                 </div>
@@ -245,5 +245,45 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Переключатель темы -->
+    <div class="theme-switch" id="themeSwitch">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- JavaScript для переключения темы -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeSwitch = document.getElementById('themeSwitch');
+            const icon = themeSwitch.querySelector('i');
+            
+            // Проверяем сохраненную тему
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+            
+            // Обработчик клика
+            themeSwitch.addEventListener('click', function() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                
+                if (currentTheme === 'dark') {
+                    // Переключаем на светлую тему
+                    document.documentElement.removeAttribute('data-theme');
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    // Переключаем на темную тему
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+        });
+    </script>
 </body>
 </html> 
