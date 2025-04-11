@@ -16,12 +16,10 @@
             <div class="header-content">
                 <div class="logo">Epairs</div>
                 <nav>
-                    <ul>
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="reviews.html">Отзывы</a></li>
-                        <li><a href="contacts.html">Контакты</a></li>
-                        <li><a href="status.html" class="active">Статус заказа</a></li>
-                    </ul>
+                    <a href="index.html">Главная</a>
+                    <a href="reviews.html">Отзывы</a>
+                    <a href="contacts.html">Контакты</a>
+                    <a href="status.html" class="active">Статус заказа</a>
                 </nav>
                 <div class="phone">+7 (993) 323-49-48</div>
             </div>
@@ -80,23 +78,68 @@
         <div class="container">
             <div class="contact-form">
                 <h2>Оставить заявку</h2>
+                <p class="form-description">Заполните форму, и мы свяжемся с вами в ближайшее время</p>
                 <form>
                     <div class="form-group">
-                        <input type="text" placeholder="Имя" required>
+                        <div class="input-icon">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Ваше имя" required>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <input type="tel" placeholder="Телефон" required>
+                        <div class="input-icon">
+                            <i class="fas fa-phone"></i>
+                            <input type="tel" placeholder="Ваш телефон" required>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Проблема" rows="4"></textarea>
+                        <div class="input-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="Ваш email" required>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label>
+                        <div class="input-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                            <select required>
+                                <option value="" disabled selected>Выберите модель устройства</option>
+                                <option value="iphone">iPhone</option>
+                                <option value="samsung">Samsung</option>
+                                <option value="xiaomi">Xiaomi</option>
+                                <option value="honor">Honor</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-icon">
+                            <i class="fas fa-tools"></i>
+                            <select required>
+                                <option value="" disabled selected>Тип ремонта</option>
+                                <option value="screen">Замена экрана</option>
+                                <option value="battery">Замена батареи</option>
+                                <option value="board">Ремонт платы</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-icon">
+                            <i class="fas fa-comment-alt"></i>
+                            <textarea placeholder="Опишите проблему" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-container">
                             <input type="checkbox" required>
-                            Я согласен с политикой обработки персональных данных
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">Я согласен с политикой обработки персональных данных</span>
                         </label>
                     </div>
-                    <button type="submit">Отправить заявку</button>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Отправить заявку
+                    </button>
                 </form>
             </div>
         </div>
@@ -106,35 +149,31 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Услуги</h3>
-                    <ul>
-                        <li><a href="services.html#iphone">iPhone</a></li>
-                        <li><a href="services.html#samsung">Samsung</a></li>
-                        <li><a href="services.html#xiaomi">Xiaomi</a></li>
-                        <li><a href="services.html#honor">Honor</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
                     <h3>Информация</h3>
                     <ul>
                         <li><a href="reviews.html">Отзывы</a></li>
                         <li><a href="contacts.html">Контакты</a></li>
-                        <li><a href="status.html">Проверить статус заказа</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Контакты</h3>
-                    <p>Телефон: +7 (993) 323-49-48</p>
-                    <p>Адрес: г. Анапа</p>
-                    <p>10:00 — 20:00<br>Без перерыва<br>Без выходных</p>
+                    <ul>
+                        <li><a href="tel:+79933234948">+7 (993) 323-49-48</a></li>
+                        <li><a href="mailto:info@epairs.ru">info@epairs.ru</a></li>
+                        <li>г. Анапа</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Мы в соцсетях</h3>
                     <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
                         <a href="#"><i class="fab fa-telegram"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>© 2016-2023 Epairs. Все права защищены.</p>
+                <p>&copy; 2025 Epairs. Все права защищены.</p>
             </div>
         </div>
     </footer>

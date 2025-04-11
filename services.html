@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Epairs - Ремонт техники</title>
+    <title>Услуги - Epairs</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <meta name="description" content="Профессиональный ремонт iPhone, Samsung, Xiaomi и Honor. Гарантия на все виды работ. Бесплатная диагностика.">
@@ -61,7 +61,8 @@
             <div class="header-content">
                 <div class="logo">Epairs</div>
                 <nav>
-                    <a href="index.html" class="active">Главная</a>
+                    <a href="index.html">Главная</a>
+                    <a href="services.html" class="active">Услуги</a>
                     <a href="reviews.html">Отзывы</a>
                     <a href="contacts.html">Контакты</a>
                 </nav>
@@ -72,8 +73,8 @@
 
     <section class="hero">
         <div class="container">
-            <h1>EPAIRS</h1>
-            <p>Ваш надежный партнер в ремонте!</p>
+            <h1>Наши услуги</h1>
+            <p>Профессиональный ремонт любой сложности</p>
         </div>
     </section>
 
@@ -81,93 +82,54 @@
         <div class="container">
             <h2>Наши услуги</h2>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" id="iphone">
                     <img src="images/iphone-icon.jpg" alt="iPhone" width="200" height="200">
                     <h3>iPhone</h3>
+                    <p>Ремонт всех моделей iPhone</p>
+                    <ul class="service-list">
+                        <li>Замена экрана</li>
+                        <li>Замена батареи</li>
+                        <li>Ремонт после воды</li>
+                        <li>Замена разъема зарядки</li>
+                        <li>Ремонт материнской платы</li>
+                    </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card" id="samsung">
                     <img src="images/samsung-icon.jpg" alt="Samsung" width="200" height="200">
                     <h3>Samsung</h3>
+                    <p>Ремонт всех моделей Samsung</p>
+                    <ul class="service-list">
+                        <li>Замена экрана</li>
+                        <li>Замена батареи</li>
+                        <li>Ремонт после воды</li>
+                        <li>Замена разъема зарядки</li>
+                        <li>Ремонт материнской платы</li>
+                    </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card" id="xiaomi">
                     <img src="images/xiaomi-icon.jpg" alt="Xiaomi" width="200" height="200">
                     <h3>Xiaomi</h3>
+                    <p>Ремонт всех моделей Xiaomi</p>
+                    <ul class="service-list">
+                        <li>Замена экрана</li>
+                        <li>Замена батареи</li>
+                        <li>Ремонт после воды</li>
+                        <li>Замена разъема зарядки</li>
+                        <li>Ремонт материнской платы</li>
+                    </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card" id="honor">
                     <img src="images/honor-icon.jpg" alt="Honor" width="200" height="200">
                     <h3>Honor</h3>
+                    <p>Ремонт всех моделей Honor</p>
+                    <ul class="service-list">
+                        <li>Замена экрана</li>
+                        <li>Замена батареи</li>
+                        <li>Ремонт после воды</li>
+                        <li>Замена разъема зарядки</li>
+                        <li>Ремонт материнской платы</li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact-form-section">
-        <div class="container">
-            <div class="contact-form">
-                <h2>Оставить заявку</h2>
-                <p class="form-description">Заполните форму, и мы свяжемся с вами в ближайшее время</p>
-                <form>
-                    <div class="form-group">
-                        <div class="input-icon">
-                            <i class="fas fa-user"></i>
-                            <input type="text" placeholder="Ваше имя" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-icon">
-                            <i class="fas fa-phone"></i>
-                            <input type="tel" placeholder="Ваш телефон" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-icon">
-                            <i class="fas fa-envelope"></i>
-                            <input type="email" placeholder="Ваш email" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                            <select required>
-                                <option value="" disabled selected>Выберите модель устройства</option>
-                                <option value="iphone">iPhone</option>
-                                <option value="samsung">Samsung</option>
-                                <option value="xiaomi">Xiaomi</option>
-                                <option value="honor">Honor</option>
-                                <option value="other">Другое</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-icon">
-                            <i class="fas fa-tools"></i>
-                            <select required>
-                                <option value="" disabled selected>Тип ремонта</option>
-                                <option value="screen">Замена экрана</option>
-                                <option value="battery">Замена батареи</option>
-                                <option value="board">Ремонт платы</option>
-                                <option value="other">Другое</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-icon">
-                            <i class="fas fa-comment-alt"></i>
-                            <textarea placeholder="Опишите проблему" rows="4"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group checkbox-group">
-                        <label class="checkbox-container">
-                            <input type="checkbox" required>
-                            <span class="checkmark"></span>
-                            <span class="checkbox-text">Я согласен с политикой обработки персональных данных</span>
-                        </label>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i>
-                        Отправить заявку
-                    </button>
-                </form>
             </div>
         </div>
     </section>
@@ -206,7 +168,6 @@
                 <div class="footer-section">
                     <h3>Информация</h3>
                     <ul>
-                        <li><a href="reviews.html">Отзывы</a></li>
                         <li><a href="contacts.html">Контакты</a></li>
                     </ul>
                 </div>
