@@ -1,22 +1,23 @@
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --accent-color: #28a745;
-    --text-color: #333;
-    --background-color: #fff;
-    --border-color: #dee2e6;
-    --hover-color: #0056b3;
+    --primary-color: #1e3d59;
+    --secondary-color: #456173;
+    --accent-color: #3d5a80;
+    --text-color: #2b2d42;
+    --background-color: #f5f7fa;
+    --border-color: #e1e5eb;
+    --hover-color: #344966;
     --success-color: #28a745;
     --error-color: #dc3545;
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-color: rgba(30, 61, 89, 0.1);
     --shadow-sm: 0 1px 3px var(--shadow-color);
     --shadow-md: 0 4px 6px var(--shadow-color);
     --shadow-lg: 0 10px 15px var(--shadow-color);
     --transition: all 0.3s ease;
     --text-light: #4a5568;
-    --light-bg: #ffffff;
+    --light-bg: #f8fafc;
     --white: #FFFFFF;
-    --gradient: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    --gradient-start: #1e3d59;
+    --gradient-end: #3d5a80;
     --border-radius-sm: 8px;
     --border-radius-md: 12px;
     --border-radius-lg: 20px;
@@ -1026,4 +1027,16 @@ nav a:nth-child(6) { animation-delay: 0.6s; }
 /* Удаляем стили для переключателя темы */
 .theme-switch {
     display: none;
+}
+
+/* Удаляем стили для иконки темы */
+.theme-switch i {
+    display: none;
+}
+
+/* Удаляем стили для переключателя темы в мобильной версии */
+@media (max-width: 768px) {
+    .theme-switch {
+        display: none;
+    }
 }
