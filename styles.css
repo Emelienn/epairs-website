@@ -271,38 +271,39 @@ nav a.active::after {
     z-index: 1;
 }
 
+/* Обновленные стили для карточек услуг */
 .service-card {
-    background: var(--white);
-    border-radius: var(--border-radius-md);
-    padding: 2rem;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
     text-align: center;
-    transition: all var(--transition-normal);
-    position: relative;
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--border-color);
-}
-
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
-    transform: scaleX(0);
-    transition: transform var(--transition-normal);
-    transform-origin: left;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.service-card:hover::before {
-    transform: scaleX(1);
+.service-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.05);
+}
+
+.service-card h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.5rem;
 }
 
 .service-card i {
@@ -314,13 +315,6 @@ nav a.active::after {
 
 .service-card:hover i {
     transform: scale(1.1);
-}
-
-.service-card h3 {
-    color: var(--text-color);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
 }
 
 .service-card p {
@@ -1597,5 +1591,215 @@ nav a:nth-child(6) { animation-delay: 0.6s; }
 
     .guarantee-card {
         padding: 20px;
+    }
+}
+
+/* Стили для страницы iPhone */
+.iphone-hero {
+    background: linear-gradient(135deg, rgba(26, 54, 93, 0.95) 0%, rgba(44, 82, 130, 0.95) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    margin-top: 80px;
+    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+}
+
+.iphone-hero::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="rgba(255,255,255,0.05)"/></svg>');
+    animation: rotate 30s linear infinite;
+    opacity: 0.5;
+}
+
+.iphone-hero h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+    letter-spacing: 3px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: none;
+    background: linear-gradient(to right, #ffffff, #e0e0e0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s infinite linear;
+}
+
+.iphone-hero h1::before {
+    content: 'IP';
+    text-transform: uppercase;
+}
+
+.iphone-hero h1::after {
+    content: 'hone';
+    text-transform: lowercase;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.repair-services {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.repair-services .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.repair-services .service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.repair-services .service-card:hover {
+    transform: translateY(-5px);
+}
+
+.repair-services .service-card i {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.repair-services .service-card h3 {
+    margin: 15px 0;
+    color: #333;
+}
+
+.repair-services .service-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.models {
+    padding: 80px 0;
+}
+
+.models-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.model-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.model-card h3 {
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.model-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.model-card ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+.model-card ul li:last-child {
+    border-bottom: none;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .repair-services .services-grid,
+    .models-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .iphone-hero {
+        padding: 60px 0;
+    }
+    
+    .repair-services,
+    .models {
+        padding: 40px 0;
+    }
+}
+
+.iphone-models {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.iphone-models h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #333;
+}
+
+.iphone-models-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.iphone-model-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.iphone-model-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.iphone-model-card h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .iphone-models-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .iphone-model-card h3 {
+        font-size: 16px;
     }
 }
