@@ -175,7 +175,6 @@ nav a.active::after {
 
 /* Hero Section */
 .hero {
-    height: 40vh;
     background: linear-gradient(135deg, rgba(26, 54, 93, 0.95) 0%, rgba(44, 82, 130, 0.95) 100%);
     display: flex;
     align-items: center;
@@ -186,6 +185,7 @@ nav a.active::after {
     overflow: hidden;
     margin-top: 80px;
     border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+    padding: 60px 0;
 }
 
 .hero::before {
@@ -204,13 +204,26 @@ nav a.active::after {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 800;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
     position: relative;
     z-index: 2;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: none;
+    background: linear-gradient(to right, #ffffff, #e0e0e0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s infinite linear;
+}
+
+.hero h1::first-letter,
+.hero h1::after {
+    display: none;
 }
 
 .hero p {

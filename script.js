@@ -273,4 +273,33 @@ const animateOnScroll = function() {
 
 // Запускаем анимацию при загрузке и прокрутке
 window.addEventListener('load', animateOnScroll);
-window.addEventListener('scroll', animateOnScroll); 
+window.addEventListener('scroll', animateOnScroll);
+
+// Мобильное меню
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Закрываем меню при клике на ссылку
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+    
+    // Закрываем меню при клике вне его
+    document.addEventListener('click', function(event) {
+        if (navMenu && navMenu.classList.contains('active') && 
+            !navMenu.contains(event.target) && 
+            !menuToggle.contains(event.target)) {
+            navMenu.classList.remove('active');
+        }
+    });
+}); 
