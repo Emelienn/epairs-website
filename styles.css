@@ -655,245 +655,92 @@ nav a.active::after {
 }
 
 .contact-form {
-    background: var(--white);
-    padding: 50px;
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-lg);
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
-    position: relative;
-    z-index: 1;
-    border: 1px solid rgba(26, 54, 93, 0.1);
+    padding: 40px 20px;
 }
 
 .contact-form h2 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
-    font-size: var(--font-size-xl);
     text-align: center;
-    position: relative;
-    padding-bottom: 15px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-.contact-form h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: var(--gradient);
-    border-radius: 3px;
-}
-
-.form-description {
+.contact-form p {
     text-align: center;
-    color: var(--text-light);
     margin-bottom: 30px;
-    font-size: var(--font-size-md);
+    color: #666;
+}
+
+.contact-form form {
+    display: grid;
+    gap: 20px;
 }
 
 .form-group {
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.input-icon {
-    position: relative;
     display: flex;
-    align-items: center;
-}
-
-.input-icon i {
-    position: absolute;
-    left: 15px;
-    color: var(--accent-color);
-    font-size: 18px;
-    z-index: 1;
+    flex-direction: column;
 }
 
 .form-group input,
-.form-group textarea,
-.form-group select {
-    width: 100%;
-    padding: 15px 15px 15px 45px;
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius-md);
-    background: var(--white);
-    color: var(--text-color);
-    transition: all var(--transition-normal);
-    font-size: var(--font-size-md);
-    box-shadow: var(--shadow-sm);
-}
-
-.form-group select {
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231a365d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 15px center;
-    background-size: 16px;
-    padding-right: 40px;
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
 }
 
 .form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-    border-color: var(--accent-color);
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
     outline: none;
-    box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.1);
 }
 
 .form-group textarea {
-    resize: vertical;
     min-height: 120px;
+    resize: vertical;
 }
 
-.checkbox-group {
-    margin: 25px 0;
-}
-
-.checkbox-container {
+.form-group label {
     display: flex;
     align-items: center;
-    position: relative;
-    padding-left: 35px;
-    cursor: pointer;
-    font-size: var(--font-size-md);
-    user-select: none;
+    gap: 8px;
+    color: #666;
+    font-size: 14px;
 }
 
-.checkbox-container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+.form-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
 }
 
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 22px;
-    width: 22px;
-    background-color: var(--white);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius-sm);
-    transition: all var(--transition-normal);
-}
-
-.checkbox-container:hover input ~ .checkmark {
-    border-color: var(--accent-color);
-}
-
-.checkbox-container input:checked ~ .checkmark {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.checkbox-container input:checked ~ .checkmark:after {
-    display: block;
-}
-
-.checkbox-container .checkmark:after {
-    left: 7px;
-    top: 3px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-}
-
-.checkbox-text {
-    color: var(--text-color);
-    font-size: var(--font-size-sm);
-}
-
-.submit-btn {
-    background: var(--gradient);
-    color: var(--white);
-    padding: 15px 30px;
+.contact-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
     border: none;
-    border-radius: var(--border-radius-md);
-    font-weight: 600;
+    border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
-    transition: all var(--transition-normal);
-    width: 100%;
-    font-size: var(--font-size-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: var(--shadow-md);
-    position: relative;
-    overflow: hidden;
+    transition: background-color 0.3s;
 }
 
-.submit-btn i {
-    margin-right: 10px;
-    font-size: 18px;
-}
-
-.submit-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
-}
-
-.submit-btn:active {
-    transform: translateY(-1px);
-}
-
-.submit-btn::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
-    transform: translateX(-100%);
-    transition: transform 0.6s ease;
-}
-
-.submit-btn:hover::after {
-    transform: translateX(100%);
+.contact-form button:hover {
+    background-color: #0056b3;
 }
 
 @media (max-width: 768px) {
     .contact-form {
-        padding: 30px 20px;
-    }
-    
-    .contact-form h2 {
-        font-size: var(--font-size-lg);
-    }
-    
-    .form-description {
-        font-size: var(--font-size-sm);
+        padding: 20px;
     }
     
     .form-group input,
-    .form-group textarea,
-    .form-group select {
-        padding: 12px 12px 12px 40px;
-        font-size: var(--font-size-sm);
-    }
-    
-    .input-icon i {
-        font-size: 16px;
-        left: 12px;
-    }
-    
-    .submit-btn {
-        padding: 12px 20px;
-        font-size: var(--font-size-sm);
+    .form-group select,
+    .form-group textarea {
+        font-size: 14px;
     }
 }
 
@@ -1196,9 +1043,9 @@ footer a:active {
     .features-grid {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 15px;
-    }
+}
 
-    .feature {
+.feature {
         padding: 20px 15px;
     }
 
@@ -1225,7 +1072,7 @@ footer a:active {
     }
 
     .review-card {
-        padding: 20px;
+    padding: 20px;
     }
 
     .review-author {
@@ -1260,7 +1107,7 @@ footer a:active {
     }
 
     /* Footer */
-    footer {
+footer {
         padding: 40px 20px;
     }
 
@@ -1391,7 +1238,7 @@ footer a:active {
 
     .cta-button {
         width: 100%;
-        text-align: center;
+    text-align: center;
     }
 
     .service-card,

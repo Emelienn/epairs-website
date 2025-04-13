@@ -101,75 +101,52 @@
         </div>
     </section>
 
-    <section class="contact-form-section">
-        <div class="container">
-            <div class="contact-form">
-                <h2>Оставить заявку</h2>
-                <p class="form-description">Заполните форму, и мы свяжемся с вами в ближайшее время</p>
-                <form>
-                    <div class="form-group">
-                        <div class="input-icon">
-                            <i class="fas fa-user"></i>
-                            <input type="text" placeholder="Ваше имя" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-icon">
-                            <i class="fas fa-phone"></i>
-                            <input type="tel" placeholder="Ваш телефон" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-icon">
-                            <i class="fas fa-envelope"></i>
-                            <input type="email" placeholder="Ваш email" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                            <select required>
-                                <option value="" disabled selected>Выберите модель устройства</option>
-                                <option value="iphone">iPhone</option>
-                                <option value="samsung">Samsung</option>
-                                <option value="xiaomi">Xiaomi</option>
-                                <option value="honor">Honor</option>
-                                <option value="other">Другое</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-icon">
-                            <i class="fas fa-tools"></i>
-                            <select required>
-                                <option value="" disabled selected>Тип ремонта</option>
-                                <option value="screen">Замена экрана</option>
-                                <option value="battery">Замена батареи</option>
-                                <option value="board">Ремонт платы</option>
-                                <option value="other">Другое</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-icon">
-                            <i class="fas fa-comment-alt"></i>
-                            <textarea placeholder="Опишите проблему" rows="4"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group checkbox-group">
-                        <label class="checkbox-container">
-                            <input type="checkbox" required>
-                            <span class="checkmark"></span>
-                            <span class="checkbox-text">Я согласен с политикой обработки персональных данных</span>
-                        </label>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i>
-                        Отправить заявку
-                    </button>
-                </form>
+    <section class="contact-form">
+        <h2>Оставить заявку</h2>
+        <p>Заполните форму, и мы свяжемся с вами в ближайшее время</p>
+        <form>
+            <div class="form-group">
+                <input type="text" placeholder="Ваше имя" required>
             </div>
-        </div>
+            <div class="form-group">
+                <input type="tel" placeholder="Ваш телефон" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Ваш email" required>
+            </div>
+            <div class="form-group">
+                <select required>
+                    <option value="">Выберите устройство</option>
+                    <option value="apple">Apple</option>
+                    <option value="samsung">Samsung</option>
+                    <option value="xiaomi">Xiaomi</option>
+                    <option value="huawei">Huawei</option>
+                    <option value="other">Другой</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Модель устройства" required>
+            </div>
+            <div class="form-group">
+                <select required>
+                    <option value="">Тип ремонта</option>
+                    <option value="screen">Замена экрана</option>
+                    <option value="battery">Замена батареи</option>
+                    <option value="motherboard">Ремонт материнской платы</option>
+                    <option value="other">Другое</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Опишите проблему" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" required>
+                    Я согласен на обработку персональных данных
+                </label>
+            </div>
+            <button type="submit">Отправить заявку</button>
+        </form>
     </section>
 
     <section class="features">
